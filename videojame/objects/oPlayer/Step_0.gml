@@ -13,19 +13,26 @@ inputmag = (key_right-key_left != 0) or (key_down-key_up != 0);
 
 aim_dir =  point_direction(x,y,mouse_x,mouse_y)
 
+if inputmag != 0
+{
+	fuel = approach(fuel,0,.1)
+}
+
 var 
 vx, vy,
 ax, ay;
 
-vx = x-old_x
-vy = y-old_y
+vx = (x-old_x)/global.time_factor
+vy = (y-old_y)/global.time_factor
 
 old_x = x
 old_y = y
 
-	
-fx += lengthdir_x(inputmag * accel, inputdir)
-fy += lengthdir_y(inputmag * accel, inputdir)
+if fuel > 0
+{
+	fx += lengthdir_x(inputmag * accel, inputdir)
+	fy += lengthdir_y(inputmag * accel, inputdir)
+}
 
 
 ax = fx/mass
@@ -34,13 +41,19 @@ ay = fy/mass
 fx = 0
 fy = 0
 
-x_calc = vx + ax - vx/decel
-y_calc = vy + ay - vy/decel          
+
+var finaldecel = decel/global.time_factor
+
+x_calc = vx + ax - vx/finaldecel
+y_calc = vy + ay - vy/finaldecel          
 				
 
 if key_shoot and shoot_del <= 0
 {
 	shoot_del = shoot_del_max
+	
+	fx += lengthdir_x(2, aim_dir-180)
+	fy += lengthdir_y(2, aim_dir-180)
 	
 	with instance_create_layer(x+lengthdir_x(16,aim_dir),y+lengthdir_y(16,aim_dir),"Instances",oBullet)
 	{
@@ -52,5 +65,5 @@ if key_shoot and shoot_del <= 0
 		
 shoot_del = approach(shoot_del,0,1)
 				   
-x += x_calc
-y += y_calc
+x += x_calc*global.time_factor
+y += y_calc*global.time_factor

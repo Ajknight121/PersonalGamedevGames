@@ -1,5 +1,5 @@
-x += lengthdir_x(spd,dir)
-y += lengthdir_y(spd,dir)
+x += lengthdir_x(spd,dir)*global.time_factor
+y += lengthdir_y(spd,dir)*global.time_factor
 
 image_angle = dir
 

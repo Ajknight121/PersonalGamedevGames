@@ -26,3 +26,6 @@ accuracy = 6
 flash = 0
 
 hp = 10
+
+fuel_max = 100
+fuel = fuel_max
