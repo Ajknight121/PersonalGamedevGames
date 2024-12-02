@@ -18,7 +18,7 @@ ds_list_add(weapon_list,instance_create_depth(x,y,layer_get_depth("Instances")-5
 
 weapon_list_size = ds_list_size(weapon_list);
 
-for(var i = 0; i < weapon_list_size; i++;)
+for(var i = 0; i < weapon_list_size; i++)
 {
 
 	var weapon_id = ds_list_find_value(weapon_list,i)
