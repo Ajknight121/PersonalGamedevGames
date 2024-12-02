@@ -62,6 +62,7 @@
     {"id":{"name":"sHome","path":"sprites/sHome/sHome.yy",},},
     {"id":{"name":"sHomeGun","path":"sprites/sHomeGun/sHomeGun.yy",},},
     {"id":{"name":"sHomeSniper","path":"sprites/sHomeSniper/sHomeSniper.yy",},},
+    {"id":{"name":"sJerma","path":"sprites/sJerma/sJerma.yy",},},
     {"id":{"name":"sMohter","path":"sprites/sMohter/sMohter.yy",},},
     {"id":{"name":"sNothing","path":"sprites/sNothing/sNothing.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
