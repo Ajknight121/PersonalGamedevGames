@@ -231,7 +231,7 @@ function lexp(a, b, t)
 
 function dec(val,goal = 0,spd = 1)
 {
-	spd *= global.timeperc;
+	spd *= global.time_factor;
 	
 	if (val < goal)
 	{
