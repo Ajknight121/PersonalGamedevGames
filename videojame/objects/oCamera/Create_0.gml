@@ -2,6 +2,8 @@ cam = camera_create_view(0,0,global.ideal_width,global.ideal_height);
 view_set_camera(0,cam);
 follow = noone;
 
+zoom = 1.3
+
 viewwidthhalf = camera_get_view_width(cam)*0.5;
 viewheighthalf = camera_get_view_height(cam)*0.5;
 

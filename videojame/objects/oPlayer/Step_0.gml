@@ -15,7 +15,7 @@ aim_dir =  point_direction(x,y,mouse_x,mouse_y)
 
 if inputmag != 0
 {
-	fuel = approach(fuel,0,.1)
+	fuel = dec(fuel,0,.1)
 }
 
 var 

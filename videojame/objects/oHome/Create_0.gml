@@ -22,7 +22,6 @@ for(var i = 0; i < weapon_list_size; i++)
 {
 
 	var weapon_id = ds_list_find_value(weapon_list,i)
-	
 	weapon_id.parent = id
 }
 
