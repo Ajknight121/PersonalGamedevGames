@@ -32,6 +32,7 @@ y += y_calc
 
 if hp <= 0
 {
+	global.score += worth;
 	instance_destroy();
 }
 

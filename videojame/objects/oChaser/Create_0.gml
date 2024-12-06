@@ -23,3 +23,5 @@ vis_dir = 0
 target = noone
 
 dmg = 1
+
+worth = irandom_range(10,15)

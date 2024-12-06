@@ -29,3 +29,12 @@ hp = 10
 
 fuel_max = 100
 fuel = fuel_max
+
+enum PLAYERSTATE
+{
+	ACTIVE,
+	FULEING,
+	DEAD
+}
+
+state = PLAYERSTATE.ACTIVE
