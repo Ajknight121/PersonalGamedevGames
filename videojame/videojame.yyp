@@ -52,6 +52,7 @@
     {"id":{"name":"oSpawner","path":"objects/oSpawner/oSpawner.yy",},},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Spawn_Functions","path":"scripts/Spawn_Functions/Spawn_Functions.yy",},},
     {"id":{"name":"Utility","path":"scripts/Utility/Utility.yy",},},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},},
     {"id":{"name":"sBg","path":"sprites/sBg/sBg.yy",},},

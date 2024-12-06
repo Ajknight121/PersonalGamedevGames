@@ -18,7 +18,7 @@ if paused // Unpause
 
 if paused // Freezes all other objects EXCEPT itself
 {
-	instance_deactivate_all(1);
+	instance_deactivate_all(true);
 	
 	audio_pause_all();
 }
