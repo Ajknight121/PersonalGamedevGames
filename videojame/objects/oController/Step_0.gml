@@ -1,5 +1,6 @@
 pause_button = keyboard_check_pressed(vk_escape) or keyboard_check_pressed(ord("P"))
-if pause_button // Initiate Pause 
+
+if pause_button and pauseable == true // Initiate Pause 
 {
 	paused = !paused;
 	if(!sprite_exists(screenShot)){
@@ -30,4 +31,12 @@ else
     }
 	audio_resume_all();
 	instance_activate_all();
+}
+
+if paused = false
+{
+	if oPlayer.state == PLAYERSTATE.DEAD
+	{
+		pauseable = false
+	}
 }

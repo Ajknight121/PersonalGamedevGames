@@ -35,4 +35,32 @@ draw_rectangle(screen_middleX+fuel_bar_XO,
 draw_text(10,10,global.time_factor)
 
 
+if oPlayer.state = PLAYERSTATE.DEAD
+{
+	if gameover = false
+	{
+		global.score_final = global.score
+		gameover = true
+	}
+}
 
+if gameover = true
+{
+	
+	game_over_alph = lexp(game_over_alph,1,0.02)
+	draw_set_alpha(game_over_alph)
+	draw_set_color(c_black)
+	draw_rectangle(0,0,global.ideal_width,global.ideal_height,false)
+	draw_set_alpha(1)
+	
+	draw_set_color(c_white)
+	if text_time <= 0 
+	{
+		text_offest = lexp(text_offest,0,0.06)
+	}
+	else text_time --;
+	
+	
+	draw_text(screen_middleX+text_offest,screen_middleY,"Death is not the end...")
+	draw_text(screen_middleX-text_offest,screen_middleY+32,"(Press R To Restart)")
+}
